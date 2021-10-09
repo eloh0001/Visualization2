@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Visualization 2</title>
+    
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+    <script src="vega_lite_vis1.js"></script>
+
+    <title> Visualization 2</title>
+
 </head>
 <body>
-    <h1>Alcohol around the world</h1>
-    <h2>Total litres of pure alcohol</h2>
-    <p>Explaining about average litres of pure alcohol consumed in the world</p>
-    <p> explain more</p>
+    <h1>Alcohol consumption in the world</h1>
 
-    <h2>Comparison of beer serving in each continent</h2>
-    <p>explaing which continent has more serving</p>
+    <h2>Total litres of pure alcohol</h2>
+
+    <div id="map_chart">
+    </div>
+    <h3>Top five countries with most consumption of pure alcohol </h3>
+    <p>Showing the average litres of pure alcohol consumption in the world, having a comparison between it</p>
+
+    <h2>Beer, spirit and wine servings among continents</h2>
+    <div id="bar_chart">
+    </div>
+    <p>Comparison of alcohol type from each continent</p>
+    <p>Percentage of different alcohol type required in the world(Compare)</p>
+
 </body>
 </html>

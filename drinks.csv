@@ -1,4 +1,4 @@
-Country,Beer_servings,Spirit_servings,Wine_servings ,Total servings,Percentage_beer,Percentage_spirit,Percentage_wine,Total_Litres_of_Pure_Alcohol,Population,Continent
+Country,Beer_servings,Spirit_servings,Wine_servings ,Total_servings,Percentage_beer,Percentage_spirit,Percentage_wine,Total_Litres_of_Pure_Alcohol,Population,Continent
 Albania,89,132,54,275,32.36%,48.00%,19.64%,4.9,2877239,Europe
 Algeria,25,0,14,39,64.10%,0.00%,35.90%,0.7,43984569,Africa
 Andorra,245,138,312,695,35.25%,19.86%,44.89%,12.4,77287,Europe

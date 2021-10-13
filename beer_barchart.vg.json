@@ -2,16 +2,16 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
     "width": 750,
-    "height": 300,
+    "height": 500,
     "data": {"url": "https://raw.githubusercontent.com/eloh0001/Visualization2/main/drinks.csv"},
     "mark": "bar",
     "encoding": {
       "x": {"field": "Continent", "type": "nominal"},
-      "y": {"aggregate": "average","field": "Beer servings", 
+      "y": {"aggregate": "average","field": "Beer_servings", 
       "type": "quantitative"
       },
       "tooltip": [
-      {"field": "Beer servings", "type": "quantitative", "aggregate": "average","format":".2f"},
+      {"field": "Beer_servings", "type": "quantitative", "aggregate": "average","format":".2f"},
       {"field": "Population", "type": "quantitative", "aggregate": "sum", "format": ","}
          ]
    }

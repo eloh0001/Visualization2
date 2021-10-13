@@ -1,5 +1,5 @@
-var vg_2 = "mapchart.vg.json";
+var vg_2 = "bubble_plot.vg.json";
 
-vegaEmbed("#map_chart", vg_2).then(function(result) {
+vegaEmbed("#bubble_plot", vg_2).then(function(result) {
 
 }).catch(console.error);

@@ -1,4 +1,4 @@
-Country,Beer servings,Spirit servings,Wine servings ,Total Litres of Pure Alcohol,Population,Continent,Alcohol type
+Country,Beer_servings,Spirit_servings,Wine_servings ,Total_Litres_of_Pure_Alcohol,Population,Continent,Alcohol type
 Albania,89,132,54,4.9,2877239,Europe,Beer 
 Algeria,25,0,14,0.7,43984569,Africa,Spirit
 Andorra,245,138,312,12.4,77287,Europe,Wine

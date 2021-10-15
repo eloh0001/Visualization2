@@ -1,7 +1,7 @@
-﻿Continent,Percentage_beer
-Europe,43.94%
-Asia,7.43%
-Africa,14.21%
-South America,10.59%
-Oceania,6.98%
-North America,16.85%
+﻿Continent,Total_beer,Percentage_beer
+Europe,8720,43.94%
+Asia,1475,7.43%
+Africa,2820,14.21%
+South America,2101,10.59%
+Oceania,1386,6.98%
+North America,3345,16.85%

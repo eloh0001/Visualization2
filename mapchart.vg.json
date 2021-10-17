@@ -1,53 +1,76 @@
 {
-   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-   "width": 750,
-   "height": 500,
-   "title": "Total litres of pure alcohol consumed in the world",
-   "projection": {"type": "equirectangular"},
-   "layer": [
-     {
-       "data": {
-         "url": "https://raw.githubusercontent.com/eloh0001/FIT3179/main/drink.geo.topojson",
-         "format": {"type": "topojson", "feature": "drink.geo"}
-       },
-       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-     },
-     {
-        "data": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 400,
+  "title" : "Total litres of pure alcohol consumption in the world",
+  "background":"#eaeef1",
+   "config": {
+     "view": {
+        "stroke": "transparent"
+     }
+   },
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
         "url": "https://raw.githubusercontent.com/eloh0001/FIT3179/main/drink.geo.topojson",
         "format": {"type": "topojson", "feature": "drink.geo"}
-     },
-     "transform": [
-     {
-        "lookup": "properties.name",
-        "from": {
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/eloh0001/FIT3179/main/drink.geo.topojson",
+        "format": {"type": "topojson", "feature": "drink.geo"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
             "data": {
-                "url": "https://raw.githubusercontent.com/eloh0001/Visualization2/main/drinks.csv"
+              "url": "https://raw.githubusercontent.com/eloh0001/Visualization2/main/drinks.csv"
             },
             "key": "Country",
-            "fields": ["Total_Litres_of_Pure_Alcohol"]
-            }
+            "fields": ["Total_Litres_of_Pure_Alcohol", "Percentage_beer","Percentage_spirit","Percentage_wine"]
+          }
         }
-     ],
-     "mark": {"type": "geoshape"},
-     "encoding": {
-     "color": {
-        "field": "Total_Litres_of_Pure_Alcohol",
-        "type": "quantitative",
-        "scale": {
+      ],
+      "mark": {"type": "geoshape", "strokeWidth": 2},
+      "encoding": {
+        "color": {
+          "field": "Total_Litres_of_Pure_Alcohol",
+          "type": "quantitative",
+          "title": "Total litres of pure alcohol",
+          "scale": {
             "type": "threshold",
             "domain": [5, 10, 15],
             "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-        }
-     },
-     "tooltip": [
-      {"field": "properties.name", "type": "nominal", "title":    "Country"},
-      {"field": "Total_Litres_of_Pure_Alcohol", "type": "quantitative","title": "Total Litres of Pure Alcohol"},
-      {"field": "Percentage_beer", "type": "quantitative","title": "% of beer servings"},
-      {"field": "Percentage_spirit", "type": "quantitative","title": "% of spirit servings"},
-      {"field": "Percentage_wine", "type": "quantitative","title": "% of wine servings"}
-     ]
-     }
-    }  
-    ]
- }
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Country"},
+          {
+            "field": "Total_Litres_of_Pure_Alcohol",
+            "type": "quantitative",
+            "title": "Total Litres of Pure Alcohol"
+          },
+          {
+            "field": "Percentage_beer",
+            "type": "nominal",
+            "title": "Percentage of beer servings"
+          },
+          {
+            "field": "Percentage_spirit",
+            "type": "nominal",
+            "title": "Percentage of spirit servings"
+          },
+          {
+            "field": "Percentage_wine",
+            "type": "nominal",
+            "title": "Percentage of wine servings"
+          }
+        ]
+      }
+    }
+  ]
+}

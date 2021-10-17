@@ -1,5 +1,6 @@
-var vg_1 = "total_serving_barchart.vg.json";
+var vg_1 = "beer_piechart.vg.json";
 
-vegaEmbed("#bar_chart1", vg_1).then(function(result) {
+vegaEmbed("#pie_chart", vg_1,{"actions": false}).then(function(result){
 
 }).catch(console.error);
+

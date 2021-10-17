@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/eloh0001/Visualization2/main/top_ten.csv"
+  },
+  "background":"#eaeef1",
+    "config": {
+      "view": {
+         "stroke": "transparent"
+      }
+    },
+  "mark": "bar",
+  "encoding": {
+    "y": {"sort": "-x", "field": "Country", "type": "nominal", "title": null},
+    "x": {
+      "field": "Total_Litres_of_Pure_Alcohol",
+      "title": "Total litres of pure alcohol",
+      "type": "quantitative",
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": ["North America","Europe", "Asia"],
+        "range": ["#3182bd","#d95f0e", "#756bb1" ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Total_Litres_of_Pure_Alcohol",
+        "type": "quantitative",
+        "title": "Total litres of pure alcohol",
+        "format": ".1f"
+      },
+      {"field": "Population", "type": "quantitative", "format": ","},
+      {"field": "Continent", "type": "nominal"}
+    ]
+  }
+}

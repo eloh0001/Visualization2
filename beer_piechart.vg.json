@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/eloh0001/Visualization2/main/beer_percentage.csv"
+    },
+    "background":"#eaeef1",
+    "config": {
+      "view": {
+         "stroke": "transparent"
+      }
+    },
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff", "strokeWidth":2}
+  },{
+    "mark": {"type": "text", "radiusOffset": 15},
+    "encoding": {
+      "text": {"field": "Total_beer", "type": "quantitative"}
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "Total_beer", "type": "quantitative", "stack": true},
+    "radius": {"field": "Total_beer", "scale": {"type": "sqrt", "zero": true, "rangeMin": 50}},
+    "color": {
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+                "North America",
+                "South America",
+                "Europe",
+                "Africa",
+                "Asia",
+                "Oceania"
+              ],
+          "range": [
+                "#3182bd",
+                "#31a354",
+                "#d95f0e",
+                "#e34a33",
+                "#756bb1",
+                "#636363"
+          ]
+        }
+        },
+      "tooltip": [
+        {
+          "field": "Continent",
+          "type": "nominal"
+        },
+        {
+          "field": "Percentage_beer",
+          "type": "nominal",
+          "title":"Beer servings percentage"
+        }
+      ]
+  }
+}
